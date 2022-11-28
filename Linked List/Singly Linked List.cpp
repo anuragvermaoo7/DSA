@@ -13,34 +13,35 @@ class Node {
         this -> data = data;
         this -> next = NULL;
     }
-
-    void insertAtHead(Node* &head, int d)
-    {
-        Node* temp = new Node(d);
-        temp -> next = head;
-        head = temp;
-    }
-
-    void insertAtTail(Node* &tail, int d)
-    {
-        Node* temp = new Node(d);
-        tail -> next = temp;
-        tail  = temp;
-    }
-
-    void print(Node* &head)
-    {
-
-        Node* temp = head;
-
-        while(temp != NULL )
-        {
-            cout << temp -> data << " ";
-            temp = temp -> next;
-        }
-    cout << endl;
-    }
+ 
 };
+void insertAtHead(Node* &head, int d)
+{
+    Node* temp = new Node(d);
+    temp -> next = head;
+    head = temp;
+}
+
+void insertAtTail(Node* &tail, int d)
+{
+    Node* temp = new Node(d);
+    tail -> next = temp;
+    tail  = temp;
+}
+
+void print(Node* &head)
+{
+
+    Node* temp = head;
+
+    while(temp != NULL )
+    {
+        cout << temp -> data << " ";
+        temp = temp -> next;
+    }
+    cout << endl;
+}
+
 int main()
 {
 
